@@ -47,4 +47,13 @@ resource "fabric_workspace_role_assignment" "user_admin" {
 #   role = "Admin"
 # }
 
+resource "fabric_data_pipeline" "dummy_pipeline" {
+  display_name          = "dummy_pipeline"
+  description   = "A dummy data pipeline for testing purposes"
+  workspace_id  = fabric_workspace.ws1.id
+
+  # Add any required dummy configurations here
+  # Removed unsupported properties block
+}
+
 
