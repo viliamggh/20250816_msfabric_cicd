@@ -19,6 +19,13 @@
     "github": {
       "type": "http",
       "url": "https://api.githubcopilot.com/mcp/"
-    }
+    },
+    "workflows-mcp-server": {
+      "command": "npx",
+      "args": ["workflows-mcp-server"],
+      "env": {
+        "MCP_LOG_LEVEL": "info"
+      }
+    },
   }
 }
