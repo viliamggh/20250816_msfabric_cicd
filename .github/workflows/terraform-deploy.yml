@@ -34,9 +34,12 @@ jobs:
 
       - name: Initialize Terraform
         run: terraform init
+        working-directory: ./fabric_infra
 
       - name: Plan Terraform
         run: terraform plan
+        working-directory: ./fabric_infra
 
       - name: Apply Terraform
         run: terraform apply -auto-approve
+        working-directory: ./fabric_infra
