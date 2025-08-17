@@ -22,11 +22,16 @@ provider "fabric" {
   tenant_id = "8c50900e-2b23-462e-ac02-2ee3ace1c43b"
 }
 
+data "fabric_capacity" "example" {
+  display_name = "Trial-20241101T080600Z-UhThXpeuFE643hzsSaE5qA"
+}
+
 resource "fabric_workspace" "ws1" {
   display_name = "tfbronze"
   description  = "TF Bronze orkspace"
-  capacity_id = "Trial-20241101T080600Z-UhThXpeuFE643hzsSaE5qA"
+  capacity_id = data.fabric_capacity.example.id
 }
+
 
 # Grant your user account Admin access to the workspace
 resource "fabric_workspace_role_assignment" "user_admin" {
