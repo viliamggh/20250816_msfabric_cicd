@@ -18,9 +18,8 @@ terraform {
 
 # Configure the Microsoft Fabric Provider
 provider "fabric" {
-  use_msi   = true
+  use_cli   = true
   tenant_id = "8c50900e-2b23-462e-ac02-2ee3ace1c43b"
-  client_id = "eae1daaa-a909-4e2b-9907-f5a56229538b"
 }
 
 resource "fabric_workspace" "ws1" {
