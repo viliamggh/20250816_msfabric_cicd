@@ -25,6 +25,7 @@ provider "fabric" {
 resource "fabric_workspace" "ws1" {
   display_name = "tfbronze"
   description  = "TF Bronze orkspace"
+  capacity_id = "Trial-20241101T080600Z-UhThXpeuFE643hzsSaE5qA"
 }
 
 # Grant your user account Admin access to the workspace
