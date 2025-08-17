@@ -27,4 +27,24 @@ resource "fabric_workspace" "ws1" {
   description  = "TF Bronze orkspace"
 }
 
+# Grant your user account Admin access to the workspace
+resource "fabric_workspace_role_assignment" "user_admin" {
+  workspace_id = fabric_workspace.ws1.id
+  principal = {
+    id   = "9edfaa63-91e6-4648-b87a-004e6f982e19" 
+    type = "Group"
+  }
+  role = "Admin"
+}
+
+# Grant the UAMI Admin access to the workspace (for future operations)
+# resource "fabric_workspace_role_assignment" "uami_admin" {
+#   workspace_id = fabric_workspace.ws1.id
+#   principal = {
+#     id   = "eae1daaa-a909-4e2b-9907-f5a56229538b"  # Your UAMI client ID
+#     type = "ServicePrincipal"
+#   }
+#   role = "Admin"
+# }
+
 
