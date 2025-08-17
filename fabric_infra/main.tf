@@ -27,3 +27,5 @@ resource "fabric_workspace" "ws1" {
   display_name = "tfbronze"
   description  = "TF Bronze orkspace"
 }
+
+
